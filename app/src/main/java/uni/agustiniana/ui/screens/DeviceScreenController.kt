@@ -59,7 +59,7 @@ import androidx.compose.runtime.getValue
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun DemoScreen() {
+fun DeviceScreenController() {
     val context = LocalContext.current
     val isMotorOn = remember { mutableStateOf(false) }
     val motorSpeed = remember { mutableStateOf(50) } // Velocidad al 50%

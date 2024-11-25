@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.content.Context
 import android.content.pm.PackageManager
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
@@ -101,6 +102,7 @@ fun BluetoothDeviceScreen(onDeviceSelected: (BluetoothDevice) -> Unit, navigateT
                     .fillMaxWidth()
                     .clickable {
                         onDeviceSelected(device) // Conectar y cambiar de ventana
+                        Toast.makeText(context, device.address, Toast.LENGTH_SHORT).show()
                     }
                     .background(Color(5, 22, 48))
                     .border(3.dp, Color.White)
